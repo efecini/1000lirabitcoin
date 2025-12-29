@@ -4,7 +4,9 @@ import HelloWorld from './components/HelloWorld.vue';
 
 <template>
   <div>
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
+    <div
+      id="TopNav"
+      class="w-[calc(100%-0px)] h-[60px] fixed right-0 z-20 bg-[#101010] bg-opacity-80 flex items-center justify-between"
+    ></div>
   </div>
-  <!-- <HelloWorld msg="Vite + Vue" /> -->
 </template>
