@@ -1,13 +1,18 @@
 <script setup>
-import Navbar from './components/Navbar.vue';
+import InputText from 'primevue/inputtext';
+import Button from 'primevue/button';
+import ColorPicker from 'primevue/colorpicker';
+
+import { ref } from 'vue';
+
+const color = ref();
+const text = ref('');
 </script>
 
 <template>
   <div>
-    <Navbar />
-    <div
-      id="TopNav"
-      class="w-[calc(100%-0px)] h-[60px] fixed right-0 z-20 bg-[#101010] bg-opacity-80 flex items-center justify-between"
-    ></div>
+    <InputText v-model="text" /> <Button label="Save" />
+    {{ text }}
+    <ColorPicker v-model="color" />
   </div>
 </template>
