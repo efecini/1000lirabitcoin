@@ -23,10 +23,10 @@ onMounted(async () => {
         labels: labels,
         datasets: [
           {
-            label: 'BTC/USD Price',
+            label: 'Bitcoin/Dolar',
             data: prices,
             borderColor: '#ffffff',
-            backgroundColor: 'rgba(247, 147, 26, 0.1)',
+            backgroundColor: 'rgba(255, 255, 255, 0.1)',
             fill: true,
             tension: 0.4,
             pointRadius: 0,
@@ -44,19 +44,20 @@ onMounted(async () => {
           },
           title: {
             display: true,
-            text: 'Bitcoin (BTC/USD) - Last 365 Days',
-            font: { size: 20 },
-            padding: 20,
+            text: 'Her gün 1000 liralık bitcoin alıyorum.',
+            color: '#ffffff',
+            font: { size: 30 },
+            padding: 5,
           },
         },
         scales: {
           x: {
             display: true,
-            title: { display: true, text: 'Date' },
+            title: { display: true, text: 'Zaman' },
           },
           y: {
             display: true,
-            title: { display: true, text: 'Price (USD)' },
+            title: { display: true, text: 'Bitcoin' },
             ticks: {
               callback: (value) => '$' + value.toLocaleString(),
             },
@@ -75,7 +76,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="h-screen flex flex-col bg-gray-900">
+  <div class="h-screen flex flex-col bg-black">
     <!-- Navbar stays at the top -->
     <Navbar />
 
@@ -91,5 +92,6 @@ onMounted(async () => {
 canvas {
   width: 100% !important;
   height: 100% !important;
+  background-color: black;
 }
 </style>
